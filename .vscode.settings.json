@@ -1,0 +1,20 @@
+{
+    "editor.formatOnSave": true,
+    "editor.insertSpaces": true,
+    "ruby.format": "rubocop",
+    "ruby.lint": {
+        "rubocop": true
+    },
+    "ruby.useLanguageServer": true,
+    "[python]": {
+        "editor.tabSize": 4
+    },
+    "[ruby]": {
+        "editor.tabSize": 2,
+        "files.trimTrailingWhitespace": true
+    },
+    "[yaml]": {
+        "editor.tabSize": 2
+    },
+    "workbench.colorTheme": "Material Theme"
+}
