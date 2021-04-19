@@ -1,0 +1,21 @@
+[core]
+	commitGraph = true
+[diff]
+	algorithm = patience
+[gc]
+	writeCommitGraph = true
+[protocol]
+	version = 2
+[url "https://github.com/Shopify/"]
+	insteadOf = git@github.com:Shopify/
+	insteadOf = git@github.com:shopify/
+	insteadOf = ssh://git@github.com/Shopify/
+	insteadOf = ssh://git@github.com/shopify/
+[pull]
+	rebase = false
+[user]
+    name = Alex Watt
+[includeIf "gitdir:alexcwatt/"]
+	path = .gitconfig-personal
+[includeIf "gitdir:Shopify/"]
+	path = .gitconfig-shopify
