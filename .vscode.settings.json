@@ -11,7 +11,8 @@
     "liveshare.audio.joinCallBehavior": "accept",
     "liveshare.authenticationProvider": "GitHub",
     "remote.SSH.defaultExtensions": [
-        "eamodio.gitlens"
+        "eamodio.gitlens",
+        "MS-vsliveshare.vsliveshare-pack"
     ],
     "ruby.format": "rubocop",
     "ruby.lint": {
