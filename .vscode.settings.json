@@ -12,7 +12,8 @@
     "liveshare.authenticationProvider": "GitHub",
     "remote.SSH.defaultExtensions": [
         "eamodio.gitlens",
-        "MS-vsliveshare.vsliveshare-pack"
+        "MS-vsliveshare.vsliveshare-pack",
+        "misogi.ruby-rubocop"
     ],
     "ruby.format": "rubocop",
     "ruby.lint": {
@@ -31,6 +32,5 @@
     },
     "workbench.colorTheme": "Material Theme",
     "workbench.iconTheme": "eq-material-theme-icons",
-    // Shopify
     "devTestRunner.command": "bin/rails test"
 }
