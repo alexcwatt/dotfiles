@@ -14,7 +14,8 @@
         "eamodio.gitlens",
         "graphql.vscode-graphql",
         "MS-vsliveshare.vsliveshare-pack",
-        "misogi.ruby-rubocop"
+        "misogi.ruby-rubocop",
+        "rebornix.Ruby"
     ],
     "ruby.format": "rubocop",
     "ruby.lint": {
