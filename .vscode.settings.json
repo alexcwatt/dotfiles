@@ -15,7 +15,8 @@
         "graphql.vscode-graphql",
         "MS-vsliveshare.vsliveshare-pack",
         "misogi.ruby-rubocop",
-        "rebornix.Ruby"
+        "rebornix.Ruby",
+        "redhat.vscode-yaml"
     ],
     "ruby.format": "rubocop",
     "ruby.lint": {
