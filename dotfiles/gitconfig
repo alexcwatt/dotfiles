@@ -22,6 +22,8 @@
 	insteadOf = ssh://git@github.com/shopify/
 [pull]
 	rebase = false
+[push]
+	default = current
 [user]
     name = Alex Watt
 [includeIf "gitdir:alexcwatt/"]
