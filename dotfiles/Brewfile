@@ -1,5 +1,6 @@
 cask "1password"
 cask "adobe-acrobat-reader"
+cask "dash"
 cask "docker"
 cask "google-chrome"
 cask "mos"
