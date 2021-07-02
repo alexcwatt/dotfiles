@@ -1,1 +1,7 @@
-brew "mos"
+cask "1password"
+cask "adobe-acrobat-reader"
+cask "docker"
+cask "google-chrome"
+cask "mos"
+cask "slack"
+mas "Todoist", id: 585829637
