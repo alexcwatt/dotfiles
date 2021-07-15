@@ -5,4 +5,5 @@ cask "docker"
 cask "google-chrome"
 cask "mos"
 cask "slack"
+cask "vlc"
 mas "Todoist", id: 585829637
