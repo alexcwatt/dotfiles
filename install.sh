@@ -2,8 +2,6 @@
 
 if [ "$SPIN" ]; then
   DOTFILES_DIR=~/dotfiles
-
-  ./script/spin.sh
 else
   DOTFILES_DIR=~/repos-personal/dotfiles
 fi
@@ -22,3 +20,9 @@ else
 fi
 
 [ ! -d ~/.oh-my-zsh ] && sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+if [ "$SPIN" ]; then
+  ./script/spin.sh
+else
+  ./script/mac.sh
+fi
