@@ -16,7 +16,8 @@
         "MS-vsliveshare.vsliveshare-pack",
         "misogi.ruby-rubocop",
         "rebornix.Ruby",
-        "redhat.vscode-yaml"
+        "redhat.vscode-yaml",
+        "mikestead.dotenv"
     ],
     "ruby.format": "rubocop",
     "ruby.lint": {
