@@ -4,5 +4,10 @@ ZSH_THEME="robbyrussell"
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
 
+if [ "$SPIN" ]; then
+    PROMPT="%(?:%{$fg_bold[green]%}⟳ :%{$fg_bold[red]%}⟳ )"
+    PROMPT+=' %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
+fi
+
 # Shopify
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
