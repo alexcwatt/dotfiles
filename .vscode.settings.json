@@ -17,7 +17,8 @@
         "misogi.ruby-rubocop",
         "rebornix.Ruby",
         "redhat.vscode-yaml",
-        "mikestead.dotenv"
+        "mikestead.dotenv",
+        "Shopify.rubocop-lsp"
     ],
     "ruby.format": "rubocop",
     "ruby.lint": {
