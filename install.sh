@@ -1,5 +1,7 @@
 #!/bin/bash
 
+[ ! -d ~/.oh-my-zsh ] && sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 if [ "$SPIN" ]; then
   DOTFILES_DIR=~/dotfiles
 else
@@ -18,8 +20,6 @@ if [ -d $DOTFILES_DIR ] && [ ! -L $DOTFILES_DIR ]; then
 else
   echo "Could not find dotfiles directory: $DOTFILES_DIR"
 fi
-
-[ ! -d ~/.oh-my-zsh ] && sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 if [ "$SPIN" ]; then
   ./script/spin.sh
