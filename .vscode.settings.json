@@ -18,7 +18,8 @@
         "rebornix.Ruby",
         "redhat.vscode-yaml",
         "mikestead.dotenv",
-        "Shopify.rubocop-lsp"
+        "Shopify.rubocop-lsp",
+        "mattlott.copy-github-url"
     ],
     "ruby.format": "rubocop",
     "ruby.lint": {
