@@ -33,7 +33,7 @@
         "editor.tabSize": 4
     },
     "[ruby]": {
-        "editor.defaultFormatter": "rebornix.ruby",
+        "editor.defaultFormatter": "Shopify.rubocop-lsp",
         "editor.tabSize": 2,
         "files.trimTrailingWhitespace": true
     },
