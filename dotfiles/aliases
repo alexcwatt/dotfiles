@@ -1,6 +1,7 @@
 #!/bin/bash
 
 alias g="git"
+alias j="jump"
 
 # Shopify
 alias test="bin/test --include-branch-commits"
