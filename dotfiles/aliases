@@ -4,6 +4,7 @@ alias g="git"
 alias lj="longjump"
 
 # Shopify
+alias ljs="longjump spin"
 alias test="bin/test --include-branch-commits"
 alias style="bin/style --include-branch-commits"
 alias check="bin/style --include-branch-commits;bin/srb typecheck -a"
