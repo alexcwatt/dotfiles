@@ -15,4 +15,8 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-(cd ~ || exit; brew bundle)
+if [[ -d /opt/dev ]]; then
+  echo "Skipping brew bundle install - check Kepler before installing any packages"
+else
+  (cd ~ || exit; brew bundle)
+fi
