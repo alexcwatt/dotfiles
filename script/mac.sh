@@ -20,3 +20,6 @@ if [[ -d /opt/dev ]]; then
 else
   (cd ~ || exit; brew bundle)
 fi
+
+# Automatically remove Mos from quarantine
+( cd /Applications && xattr -d com.apple.quarantine Mos.app )
