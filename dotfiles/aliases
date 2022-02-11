@@ -5,9 +5,16 @@ alias lj="longjump"
 
 # Shopify
 alias ljs="longjump spin"
-alias test="bin/test --include-branch-commits"
 alias style="bin/style --include-branch-commits"
 alias check="bin/style --include-branch-commits;bin/srb typecheck -a"
 alias logs="tail -f log/development.log"
 alias hermit="rake tests:hermeticize"
 alias up="bundle install;bin/rails db:migrate"
+
+function tests() {
+    if [ -f "bin/test" ]; then
+        bin/test --include-branch-commits
+    else
+        yarn test --changedSince main
+    fi
+}
