@@ -1,5 +1,6 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
+plugins=(sudo z)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
