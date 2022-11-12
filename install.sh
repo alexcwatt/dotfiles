@@ -22,7 +22,7 @@ else
 fi
 
 if [ "$SPIN" ]; then
-  ./script/spin.sh
+  ./install/spin.sh
 else
-  ./script/mac.sh
+  ./install/mac.sh
 fi
