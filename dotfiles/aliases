@@ -15,8 +15,8 @@ function profdown() {
         echo "Please specify the spin instance."
     else
         spin_instance="${1}.alex-watt.us.spin.dev"
-        echo "Downloading profiles for Spin instance: $spin_instance"
-        download_dir="~/Downloads/spin_profiles/${1}/"
+        download_dir="$HOME/Downloads/spin_profiles/${1}/"
+        echo "Downloading profiles for Spin instance: $spin_instance to $download_dir"
         mkdir -p $download_dir
         scp -r spin@$spin_instance:/home/spin/src/github.com/Shopify/shopify/tmp/app_profiler/ $download_dir
     fi
