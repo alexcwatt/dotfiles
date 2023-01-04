@@ -10,6 +10,18 @@ alias logs="tail -f log/development.log"
 alias hermit="rake tests:hermeticize"
 alias up="bundle install;bin/rails db:migrate"
 
+function profdown() {
+    if [ $# -eq 0 ]; then
+        echo "Please specify the spin instance."
+    else
+        spin_instance="${1}.alex-watt.us.spin.dev"
+        echo "Downloading profiles for Spin instance: $spin_instance"
+        download_dir="~/Downloads/spin_profiles/${1}/"
+        mkdir -p $download_dir
+        scp -r spin@$spin_instance:/home/spin/src/github.com/Shopify/shopify/tmp/app_profiler/ $download_dir
+    fi
+}
+
 function style() {
     if [ -f "bin/style" ]; then
         bin/style --include-branch-commits
