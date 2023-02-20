@@ -5,6 +5,8 @@ plugins=(sudo z)
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
 
+PATH="$HOME/.local/bin:$PATH"
+
 if [ "$SPIN" ]; then
     PROMPT="%(?:%{$fg_bold[green]%}⟳ :%{$fg_bold[red]%}⟳ )"
     PROMPT+=' %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
