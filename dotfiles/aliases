@@ -18,7 +18,7 @@ function profdown() {
         download_dir="$HOME/Downloads/spin_profiles/${1}/"
         echo "Downloading profiles for Spin instance: $spin_instance to $download_dir"
         mkdir -p $download_dir
-        rsync -r spin@$spin_instance:/home/spin/src/github.com/Shopify/shopify/tmp/app_profiler/ $download_dir
+        rsync -r spin@$spin_instance:/home/spin/src/github.com/Shopify/shopify/tmp/app_profiler/ $download_dir --ignore-existing
     fi
 }
 
