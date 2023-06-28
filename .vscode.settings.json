@@ -25,6 +25,9 @@
         "rubocop": true
     },
     "ruby.useLanguageServer": true,
+    "rubyLsp.enabledFeatures": {
+        "onTypeFormatting": false
+    },
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
