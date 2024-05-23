@@ -5,7 +5,7 @@
 if [ "$SPIN" ]; then
   DOTFILES_DIR=~/dotfiles
 else
-  DOTFILES_DIR=~/repos-personal/dotfiles
+  DOTFILES_DIR=$(pwd)
 fi
 
 if [ -d $DOTFILES_DIR ] && [ ! -L $DOTFILES_DIR ]; then
