@@ -14,7 +14,7 @@
     "remote.SSH.defaultExtensions": [
         "eamodio.gitlens",
         "graphql.vscode-graphql",
-        "MS-vsliveshare.vsliveshare-pack",
+        "MS-vsliveshare.vsliveshare",
         "redhat.vscode-yaml",
         "mikestead.dotenv",
         "Shopify.ruby-lsp",
