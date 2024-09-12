@@ -5,7 +5,7 @@ plugins=(sudo z)
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
 
-PATH="$HOME/.local/bin:$PATH"
+PATH="$HOME/.local/bin:/opt/homebrew/bin:$PATH"
 
 if [ "$SPIN" ]; then
     PROMPT="%(?:%{$fg_bold[green]%}⟳ :%{$fg_bold[red]%}⟳ )"
@@ -15,3 +15,7 @@ fi
 
 # Shopify
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
+
+[[ -f /opt/dev/sh/chruby/chruby.sh ]] && { type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; } }
+
+[[ -x /opt/homebrew/bin/brew ]] && eval $(/opt/homebrew/bin/brew shellenv)
