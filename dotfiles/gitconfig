@@ -1,5 +1,3 @@
-[core]
-	commitGraph = true
 [alias]
 	a = add
 	c = commit
@@ -16,17 +14,6 @@
 	rbi = rebase --ignore
 	s = status -s
 	up = "!f(){ git rebase origin/$(git main-branch); }; f"
-[diff]
-	algorithm = patience
-[gc]
-	writeCommitGraph = true
-[protocol]
-	version = 2
-[url "https://github.com/Shopify/"]
-	insteadOf = git@github.com:Shopify/
-	insteadOf = git@github.com:shopify/
-	insteadOf = ssh://git@github.com/Shopify/
-	insteadOf = ssh://git@github.com/shopify/
 [url "git@github.com:"]
 	insteadOf = "gh:"
 [pull]
@@ -37,6 +24,7 @@
     name = Alex Watt
 [include]
 	path = .gitconfig-local
+	path = /Users/alex/.config/dev/gitconfig
 [includeIf "gitdir:alexcwatt/"]
 	path = .gitconfig-personal
 [includeIf "gitdir/i:Shopify/"]
