@@ -24,10 +24,10 @@
     name = Alex Watt
 [include]
 	path = .gitconfig-local
-	path = /Users/alex/.config/dev/gitconfig
 [includeIf "gitdir:alexcwatt/"]
 	path = .gitconfig-personal
 [includeIf "gitdir/i:Shopify/"]
 	path = .gitconfig-shopify
+	path = /Users/alex/.config/dev/gitconfig
 [init]
 	defaultBranch = main
