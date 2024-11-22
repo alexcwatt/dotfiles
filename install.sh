@@ -8,6 +8,8 @@ else
   DOTFILES_DIR=$(pwd)
 fi
 
+cp .vscode.settings.json ~/Library/Application\ Support/Code/User/settings.json
+
 if [ -d $DOTFILES_DIR ] && [ ! -L $DOTFILES_DIR ]; then
   for file in "$DOTFILES_DIR"/dotfiles/*; do
     base="$(basename "$file")"
