@@ -1,7 +1,7 @@
 #!/bin/bash
 
 alias g="git"
-alias lj="longjump"
+alias ccd="claude --dangerously-skip-permissions --model opus"
 
 # Shopify
 alias ljs="longjump spin"
