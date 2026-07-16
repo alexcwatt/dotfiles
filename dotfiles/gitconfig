@@ -15,6 +15,11 @@
 	rbi = rebase --ignore
 	s = status -s
 	up = "!f(){ git rebase origin/$(git main-branch); }; f"
+[pager]
+	diff = delta
+[delta]
+	line-numbers = true
+	navigate = true
 [url "git@github.com:"]
 	insteadOf = "gh:"
 [pull]

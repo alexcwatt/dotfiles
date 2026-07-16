@@ -1,5 +1,7 @@
 # Shared Homebrew dependencies for every Mac.
 # Keep this limited to tools that are appropriate on both personal and work machines.
 
+brew "git-delta"
+
 cask "raycast"
 cask "spotify"
