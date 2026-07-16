@@ -22,9 +22,10 @@
 [push]
 	default = current
 [user]
-    name = Alex Watt
+	name = Alex Watt
 [include]
 	path = .gitconfig-local
+[includeIf "gitdir:alexcwatt/"]
 	path = .gitconfig-personal
 [includeIf "gitdir/i:Shopify/"]
 	path = .gitconfig-shopify
