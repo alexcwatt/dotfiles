@@ -1,3 +1,5 @@
+# Included by ~/.gitconfig, which is intentionally a regular file so
+# tool-generated 'git config --global' writes stay out of this repo.
 [alias]
 	a = add
 	c = commit
@@ -29,11 +31,11 @@
 [user]
 	name = Alex Watt
 [include]
-	path = .gitconfig-local
+	path = gitconfig-local
 [includeIf "gitdir:alexcwatt/"]
-	path = .gitconfig-personal
+	path = gitconfig-personal
 [includeIf "gitdir/i:Shopify/"]
-	path = .gitconfig-shopify
+	path = gitconfig-shopify
 	path = /Users/alex/.config/dev/gitconfig
 [init]
 	defaultBranch = main

@@ -52,6 +52,23 @@ install_file() {
   cp "$source" "$target"
 }
 
+install_gitconfig() {
+  local source="$1"
+  local target="$2"
+
+  if [[ -f "$target" ]] && git config --file "$target" --get-all include.path 2>/dev/null | grep -Fx -- "$source" >/dev/null; then
+    echo "Already installed $target"
+    return
+  fi
+
+  backup_target "$target"
+  {
+    echo "# Machine-local git config; tools may write here."
+    echo "[include]"
+    printf "\tpath = %s\n" "$source"
+  } > "$target"
+}
+
 if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
   if [[ "${DOTFILES_SKIP_OH_MY_ZSH:-0}" == "1" ]]; then
     echo "Skipping Oh My Zsh install (DOTFILES_SKIP_OH_MY_ZSH=1)"
@@ -65,7 +82,12 @@ install_file "$DOTFILES_DIR/.vscode.settings.json" "$HOME/Library/Application Su
 if [[ -d "$DOTFILES_DIR/dotfiles" ]]; then
   for file in "$DOTFILES_DIR"/dotfiles/*; do
     base="$(basename "$file")"
-    if [[ "$base" == Brewfile* ]]; then
+    if [[ "$base" == "gitconfig" ]]; then
+      target="$HOME/.gitconfig"
+      echo "Installing $target..."
+      install_gitconfig "$file" "$target"
+      continue
+    elif [[ "$base" == Brewfile* ]]; then
       target="$HOME/$base"
     else
       target="$HOME/.$base"
