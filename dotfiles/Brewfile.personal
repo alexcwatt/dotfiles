@@ -1,0 +1,18 @@
+# Personal-only Homebrew dependencies.
+# This file is not installed on work machines.
+
+cask "1password"
+cask "adobe-acrobat-reader"
+cask "docker"
+cask "google-chrome"
+cask "iterm2"
+cask "kindle"
+cask "loom"
+cask "sequel-ace"
+cask "todoist"
+cask "visual-studio-code"
+cask "vlc"
+cask "zoom"
+
+# Fonts
+cask "font-jetbrains-mono"

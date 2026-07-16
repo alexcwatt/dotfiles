@@ -13,7 +13,7 @@ cp .vscode.settings.json ~/Library/Application\ Support/Code/User/settings.json
 if [ -d $DOTFILES_DIR ] && [ ! -L $DOTFILES_DIR ]; then
   for file in "$DOTFILES_DIR"/dotfiles/*; do
     base="$(basename "$file")"
-    if [ "$base" == "Brewfile" ]; then f="$base"; else f=".$base"; fi
+    if [[ "$base" == Brewfile* ]]; then f="$base"; else f=".$base"; fi
     echo "Installing $f..."
     target=~/"$f"
     [ -f "$target" ] && mv "$target" "$target.bak"

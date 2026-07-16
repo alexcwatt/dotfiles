@@ -1,19 +1,5 @@
-cask "1password"
-cask "adobe-acrobat-reader"
-cask "docker"
-cask "google-chrome"
-cask "iterm2"
-cask "kindle"
-cask "loom"
-cask "mos"
-cask "raycast"
-cask "sequel-ace"
-cask "spotify"
-cask "todoist"
-cask "visual-studio-code"
-cask "vlc"
-cask "zoom"
+# Shared Homebrew dependencies for every Mac.
+# Keep this limited to tools that are appropriate on both personal and work machines.
 
-# Fonts
-tap "homebrew/cask-fonts"
-cask "font-jetbrains-mono"
+cask "raycast"
+cask "spotify"

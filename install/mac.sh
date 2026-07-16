@@ -17,13 +17,46 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 mkdir -p ~/Documents/Screenshots
 defaults write com.apple.screencapture location ~/Documents/Screenshots
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-if [[ -d /opt/dev ]]; then
-  echo "Skipping brew bundle install - check Kepler before installing any packages"
-else
-  (cd ~ || exit; brew bundle)
+if ! command -v brew >/dev/null 2>&1; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-# Automatically remove Mos from quarantine
-( cd /Applications && xattr -d com.apple.quarantine Mos.app )
+if [[ -x /opt/homebrew/bin/brew ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [[ -x /usr/local/bin/brew ]]; then
+  eval "$(/usr/local/bin/brew shellenv)"
+fi
+
+run_brew_bundle() {
+  local brewfile="$1"
+
+  if [[ -f "$brewfile" ]]; then
+    echo "Installing Homebrew bundle: $brewfile"
+    brew bundle --file="$brewfile"
+  fi
+}
+
+run_brew_bundle "$HOME/Brewfile"
+
+brew_profile="${DOTFILES_BREW_PROFILE:-}"
+if [[ -z "$brew_profile" ]]; then
+  if [[ -d /opt/dev ]]; then
+    brew_profile="work"
+  else
+    brew_profile="personal"
+  fi
+fi
+
+case "$brew_profile" in
+  work)
+    echo "Using work Brewfile; check Kepler before adding any work packages"
+    run_brew_bundle "$HOME/Brewfile.work"
+    ;;
+  personal)
+    run_brew_bundle "$HOME/Brewfile.personal"
+    ;;
+  *)
+    echo "Unknown DOTFILES_BREW_PROFILE: $brew_profile (expected 'personal' or 'work')" >&2
+    exit 1
+    ;;
+esac

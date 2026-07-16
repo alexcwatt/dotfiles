@@ -1,0 +1,3 @@
+# Work-only Homebrew dependencies.
+# Shopify machines are managed by Kepler; only add packages here after confirming
+# they are allowed for work devices.
