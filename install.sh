@@ -2,11 +2,7 @@
 
 [ ! -d ~/.oh-my-zsh ] && sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-if [ "$SPIN" ]; then
-  DOTFILES_DIR=~/dotfiles
-else
-  DOTFILES_DIR=$(pwd)
-fi
+DOTFILES_DIR=$(pwd)
 
 cp .vscode.settings.json ~/Library/Application\ Support/Code/User/settings.json
 
@@ -23,8 +19,4 @@ else
   echo "Could not find dotfiles directory: $DOTFILES_DIR"
 fi
 
-if [ "$SPIN" ]; then
-  ./install/spin.sh
-else
-  ./install/mac.sh
-fi
+./install/mac.sh

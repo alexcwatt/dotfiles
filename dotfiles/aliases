@@ -4,23 +4,10 @@ alias g="git"
 alias ccd="claude --dangerously-skip-permissions --model opus"
 
 # Shopify
-alias ljs="longjump spin"
 alias check="bin/style --include-branch-commits;bin/srb typecheck -a"
 alias logs="tail -f log/development.log"
 alias hermit="rake tests:hermeticize"
 alias up="bundle install;bin/rails db:migrate"
-
-function profdown() {
-    if [ $# -eq 0 ]; then
-        echo "Please specify the spin instance."
-    else
-        spin_instance="${1}.alex-watt.us.spin.dev"
-        download_dir="$HOME/Downloads/spin_profiles/${1}/"
-        echo "Downloading profiles for Spin instance: $spin_instance to $download_dir"
-        mkdir -p $download_dir
-        rsync -rt spin@$spin_instance:/home/spin/src/github.com/Shopify/shopify/tmp/app_profiler/ $download_dir
-    fi
-}
 
 function style() {
     if [ -f "bin/style" ]; then

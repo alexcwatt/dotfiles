@@ -7,12 +7,6 @@ source $HOME/.aliases
 
 PATH="$HOME/.local/bin:/opt/homebrew/bin:$PATH"
 
-if [ "$SPIN" ]; then
-    PROMPT="%(?:%{$fg_bold[green]%}⟳ :%{$fg_bold[red]%}⟳ )"
-    PROMPT+=' %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
-    PATH="$(ruby -r rubygems -e 'puts Gem.bindir'):$PATH"
-fi
-
 # Shopify
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 
