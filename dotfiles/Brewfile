@@ -2,6 +2,7 @@
 # Keep this limited to tools that are appropriate on both personal and work machines.
 
 brew "git-delta"
+brew "hyperfine"
 
 cask "raycast"
 cask "spotify"
